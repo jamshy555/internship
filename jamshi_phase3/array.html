@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Example</title>
+</head>
+<body>
+
+<h2>Fruits List</h2>
+
+<button onclick="display()">Click to Show</button>
+
+<ul id="output"></ul>
+
+<script>
+    // Array
+    let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+    function display() {
+        let result = document.getElementById("output");
+        result.innerHTML = "";
+
+        for (let i = 0; i < fruits.length; i++) {
+            let item = document.createElement("li");
+            item.innerText = fruits[i];
+            result.appendChild(item);
+        }
+    }
+</script>
+
+</body>
+</html>

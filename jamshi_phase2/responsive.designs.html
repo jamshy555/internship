@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JAMSHI Responsive Task</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        margin: 0;
+        font-family: Verdana, sans-serif;
+        background: #1a1a1a;
+    }
+
+    .navbar {
+        width: 100%;
+        background: #f39c12;
+        color: #2c3e50;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .container {
+        display: flex;
+        padding: 10px;
+    }
+
+    .box {
+        flex: 1;
+        margin: 12px;
+        background: #27ae60;
+        color: white;
+        text-align: center;
+        padding: 35px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+
+    /* Mobile: < 600px */
+    @media (max-width: 600px) {
+        .container {
+            flex-direction: column;
+        }
+        .box {
+            background: #c0392b;
+        }
+    }
+
+    /* Tablet: 601px - 900px */
+    @media (min-width: 601px) and (max-width: 900px) {
+        .container {
+            flex-wrap: wrap;
+        }
+        .box {
+            flex: 45%;
+            background: #8e44ad;
+        }
+    }
+
+    /* Desktop: > 900px = 4 green boxes across */
+</style>
+</head>
+<body>
+
+<div class="navbar">JAMSHI FOOD MENU - Responsive</div>
+
+<div class="container">
+    <div class="box">Pizza</div>
+    <div class="box">Burger</div>
+    <div class="box">Pasta</div>
+    <div class="box">Sushi</div>
+</div>
+
+</body>
+</html>

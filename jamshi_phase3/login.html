@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Login Form Validation</h3>
+<h4>Name: Jamshi</h4>
+
+<form onsubmit="return validate()">
+<input id="user" placeholder="Username"><br><br>
+<input type="password" id="pass" placeholder="Password"><br><br>
+<button>Login</button>
+</form>
+
+<p id="error"></p>
+
+<script>
+function validate() {
+    let u = document.getElementById("user").value;
+    let p = document.getElementById("pass").value;
+    let err = document.getElementById("error");
+
+    err.innerText = "";
+    err.style.color = "red";
+
+    if (u === "" || p === "") {
+        err.innerText = "Username and Password required";
+        return false;
+    }
+
+    if (u.length < 3) {
+        err.innerText = "Username min 3 characters";
+        return false;
+    }
+
+    if (p.length < 6) {
+        err.innerText = "Password min 6 characters";
+        return false;
+    }
+
+    err.style.color = "green";
+    err.innerText = "Login Successful";
+    return true;
+}
+</script>
+
+</body>
+</html>
